@@ -1,0 +1,97 @@
+.menu--wrapper {
+  width: 98%;
+  border-radius: 5px;
+  margin: 12px;
+  padding: 10px;
+  background-color: rgb(214, 214, 214);
+}
+.menu--wrapper .menu--title {
+  text-align: center;
+  color: black;
+  margin: 20px 0;
+}
+.menu--wrapper .menu--title span {
+  font-family: mv boli;
+  text-decoration: underline;
+  color: rgb(14, 132, 14);
+}
+.menu--wrapper .menu--container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.menu--container .menu--card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 450px; */
+  width: 250px;
+  aspect-ratio: 16/9;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 2px 2px 2px rgba(14, 250, 14, 0.5);
+  /* margin: 15px; */
+}
+.menu--container .menu--card .card--image {
+  height: 120%;
+  width: 99%;
+  overflow: hidden;
+  background: black;
+}
+.menu--container .menu--card .card--image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.5s ease;
+}
+.menu--container .menu--card .card--image:hover > img {
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+/*  */
+.menu--card .card--image .favorite {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  font-size: 20px;
+  /* color: black; */
+  z-index: 5;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.menu--card:hover .card--image .favorite {
+  transform: translateX(-10px);
+  opacity: 1;
+}
+.menu--card .card--image .favorite:hover {
+  cursor: pointer;
+  color: rgb(14, 250, 14);
+}
+.menu--card .menu--card--text {
+  text-align: center;
+  height: 180px;
+}
+.menu--card .menu--card--text .food--name {
+  color: rgb(14, 132, 14);
+  margin: 5px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+.menu--card .menu--card--text .food--description {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.menu--card .food--rating {
+  color: rgb(14, 132, 14);
+  cursor: pointer;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,75 @@
+const MENUDATA = [
+  {
+    id: 2,
+    foodImageSrc: "/food-2.jpg",
+    foodName: "food",
+    foodDescription:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, neque. Lorem ipsum dolor sit amet.",
+    price: 10.0,
+    favorite: false,
+  },
+  {
+    id: 3,
+    foodImageSrc: "/food-3.jpg",
+    foodName: "food",
+    foodDescription:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, neque. Lorem ipsum dolor sit amet.",
+    price: 20.0,
+    favorite: false,
+  },
+  {
+    id: 4,
+    foodImageSrc: "/food-4.jpg",
+    foodName: "food",
+    foodDescription:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, neque. Lorem ipsum dolor sit amet.",
+    price: 30.0,
+    favorite: false,
+  },
+  {
+    id: 5,
+    foodImageSrc: "/food-1.jpg",
+    foodName: "food",
+    foodDescription:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, neque. Lorem ipsum dolor sit amet.",
+    price: 45.0,
+    favorite: false,
+  },
+  {
+    id: 6,
+    foodImageSrc: "/food-6.jpg",
+    foodName: "food",
+    foodDescription:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, neque. Lorem ipsum dolor sit amet.",
+    price: 20.0,
+    favorite: false,
+  },
+  {
+    id: 7,
+    foodImageSrc: "/food-7.jpg",
+    foodName: "food",
+    foodDescription:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, neque. Lorem ipsum dolor sit amet.",
+    price: 25.0,
+    favorite: false,
+  },
+  {
+    id: 8,
+    foodImageSrc: "/food-2.jpg",
+    foodName: "food",
+    foodDescription:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, neque. Lorem ipsum dolor sit amet.",
+    price: 50.0,
+    favorite: false,
+  },
+  {
+    id: 1,
+    foodImageSrc: "/food-5.jpg",
+    foodName: "food",
+    foodDescription:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, neque. Lorem ipsum dolor sit amet.",
+    price: 15.0,
+    favorite: false,
+  },
+];
+export default MENUDATA;

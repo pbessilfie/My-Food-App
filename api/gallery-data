@@ -1,0 +1,45 @@
+const GALLERYDATA = [
+  {
+    id: 1,
+    galleryImageSrc: "/gallery-1.jpg",
+    galleryName: "Our Gallery",
+    galleryDescription:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, autem. Lorem ipsum dolor sit amet.",
+  },
+  {
+    id: 2,
+    galleryImageSrc: "/gallery-2.jpg",
+    galleryName: "Our Gallery",
+    galleryDescription:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, autem. Lorem ipsum dolor sit amet.",
+  },
+  {
+    id: 3,
+    galleryImageSrc: "/gallery-3.jpg",
+    galleryName: "Our Gallery",
+    galleryDescription:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, autem. Lorem ipsum dolor sit amet.",
+  },
+  {
+    id: 4,
+    galleryImageSrc: "/gallery-4.jpg",
+    galleryName: "Our Gallery",
+    galleryDescription:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, autem. Lorem ipsum dolor sit amet.",
+  },
+  {
+    id: 5,
+    galleryImageSrc: "/gallery-5.jpg",
+    galleryName: "Our Gallery",
+    galleryDescription:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, autem. Lorem ipsum dolor sit amet.",
+  },
+  {
+    id: 6,
+    galleryImageSrc: "/gallery-6.jpg",
+    galleryName: "Our Gallery",
+    galleryDescription:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, autem. Lorem ipsum dolor sit amet.",
+  },
+];
+export default GALLERYDATA;

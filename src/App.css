@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+.website--main--container {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 65px;
+}
+.gen--btn {
+  display: grid;
+  /* height: 40px;
+  width: 150px; */
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 10px 20px;
+}
+.gen--btn a {
+  align-self: center;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+.gen--btn:hover a {
+  font-weight: 500;
+  font-size: 17px;
+}

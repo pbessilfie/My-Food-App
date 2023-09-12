@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "./Order.css";
-import GenButton from "../button";
+import "/src/styles/Order.css";
+import GenButton from "./button";
 
 export default function OrderForm() {
   const [formData, setFormData] = useState({
@@ -17,7 +17,7 @@ export default function OrderForm() {
   const handleOrder = (event) => {
     const { name, value } = event.target;
     setFormData((prevData) => {
-      return { ...prevData, [name] : value };
+      return { ...prevData, [name]: value };
     });
   };
 

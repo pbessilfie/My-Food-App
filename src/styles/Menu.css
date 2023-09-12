@@ -28,9 +28,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* height: 450px; */
+  height: 450px;
   width: 250px;
-  aspect-ratio: 16/9;
   background-color: white;
   border-radius: 5px;
   padding: 5px;
@@ -38,7 +37,7 @@
   /* margin: 15px; */
 }
 .menu--container .menu--card .card--image {
-  height: 120%;
+  height: 50%;
   width: 99%;
   overflow: hidden;
   background: black;
@@ -94,4 +93,66 @@
   cursor: pointer;
   margin-top: -20px;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 480px) {
+  .menu--wrapper {
+  width: 100%;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 5px;
+}
+.menu--wrapper .menu--title {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.menu--wrapper .menu--container {
+  display: flex;
+  /* flex-wrap:  nowrap; */
+  gap: 10px;
+  overflow-x: scroll;
+}
+.menu--container .menu--card {
+  height: 230px;
+  width: 150px;
+  padding: 2px;
+}
+
+
+/*  */
+.menu--card .card--image .favorite {
+  position: absolute;
+  right: 8px;
+  top: 10px;
+  font-size: 18px;
+  z-index: 5;
+  opacity: 1;
+  font-size: 15px;
+}
+.menu--card:hover .card--image .favorite {
+  transform: translateX(0px);
+}
+.menu--card .menu--card--text {
+  text-align: center;
+  height: 100px;
+}
+.menu--card .menu--card--text .food--name {
+  margin: 3px 0;
+  font-size: 13px;
+}
+.menu--card .menu--card--text .food--description {
+  font-size: 11px;
+  font-weight: 400;
+  margin-top: 0px;
+}
+.menu--card .menu--card--text .food--price {
+  font-size: 11px;
+}
+.menu--card .food--rating {
+  color: rgb(14, 132, 14);
+  cursor: pointer;
+  margin-top: 12px;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
 }

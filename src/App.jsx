@@ -1,9 +1,9 @@
 import "./App.css";
-import Gallery from "./components/gallery/Gallery";
-import Hero from "./components/hero/Hero";
-import MenuCards from "./components/menu/Menu";
-import Navbar from "./components/navbar/Navbar";
-import OrderForm from "./components/order/Order";
+import Gallery from "./components/Gallery";
+import Hero from "./components/Hero";
+import MenuCards from "./components/Menu";
+import Navbar from "./components/Navbar";
+import OrderForm from "./components/Order";
 import bg_img from "/bg-img.jpg";
 
 export default function App() {

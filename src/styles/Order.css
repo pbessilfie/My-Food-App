@@ -57,12 +57,41 @@
   color: grey;
   font-size: 12px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
+  .order--wrapper {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px 10px;
+  }
+  .order--wrapper .order--wrapper--heading {
+    font-size: 20px;
+  }
+  
+  .order--wrapper h3 {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+ 
+
+  .order--form--box .order--input--box .input {
+    height: 30px;
+    background: transparent;
+    border: 1px solid green;
+    border-radius: 2px;
+    outline: 0;
+    background-color: rgba(161, 159, 159, 0.2);
+    padding: 0 10px;
+    color: grey;
+    font-size: 12px;
+  }
   .order--wrapper .form--container .order--form--box {
     width: 90%;
   }
   .order--form--box .order--input--box {
     /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
     flex: 100%;
+    font-size: 12px;
   }
 }

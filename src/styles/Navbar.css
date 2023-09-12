@@ -1,0 +1,220 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  height: 65px;
+  padding: 0 20px;
+  background-color: rgba(255, 255, 255, 0.82);
+  box-shadow: 2px 2px 4px black;
+  border-radius: 4px;
+  z-index: 100;
+}
+.navbar .nav--content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+.navbar .nav--content .nav--logo {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 1;
+}
+.navbar .nav--content .navigation--links {
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+}
+.navbar .nav--content .navigation--links a {
+  position: relative;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
+  font-weight: bold;
+  font-size: 15px;
+}
+.navbar .nav--content .navigation--links a::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: -6px;
+  background: rgb(14, 132, 14);
+  border-radius: 6px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.navbar .nav--content .navigation--links a:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+.navbar .nav--content .navigation--icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  /* width: 200px; */
+}
+
+.navbar .nav--content .navigation--icons .nav--btn {
+  font-size: 20px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  margin: 8px;
+}
+.navbar .nav--content .navigation--icons .menu--btn {
+  display: none;
+}
+.navbar .nav--content .navigation--icons .nav--btn:hover {
+  color: rgb(14, 132, 14);
+}
+.search--box {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid rgb(14, 132, 14);
+  transition: 0.3s ease-out;
+  overflow: hidden;
+}
+.search--box #search {
+  display: flex;
+  width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  transition: 0.5s ease-out;
+}
+.search--box .search--btn {
+  font-size: 20px;
+  cursor: pointer;
+  background: rgb(14, 132, 14);
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+}
+
+#active {
+  width: 80%;
+  color: rgb(14, 132, 14);
+  font-size: 15px;
+  border: none;
+  outline: none;
+
+  padding-inline-start: 10px;
+  transition: 0.3s ease-out;
+}
+#active::placeholder {
+  color: rgb(14, 132, 14);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 5px;
+  }
+  .navbar .nav--content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+  }
+  .navbar .nav--content .nav--logo {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+  }
+  .navbar .nav--content .navigation--links {
+    position: absolute;
+    top: -1500%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: rgba(14, 132, 14, 0.98);
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .nav-active {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: rgba(14, 132, 14, 0.98);
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .nav-active a {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    margin: -200px;
+  }
+
+  .nav-active a:hover {
+    background-color: #dafeaf;
+    color: green;
+    padding: 10px;
+    border-radius: 50px;
+  }
+  .navbar .nav--content .navigation--icons {
+    height: 100%;
+    margin-left: 100px;
+  }
+  .navbar .nav--content .navigation--icons .nav--btn {
+    font-size: 17px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    margin: 5px;
+  }
+  .navbar .nav--content .navigation--icons .menu--btn {
+    display: inline-block;
+  }
+  .search--box {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid rgb(14, 132, 14);
+    transition: 0.3s ease-out;
+    overflow: hidden;
+  }
+  .search--box #search {
+    display: flex;
+    width: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    transition: 0.5s ease-out;
+  }
+  .search--box .search--btn {
+    font-size: 17px;
+    padding: 3px;
+  }
+  #active {
+    width: 120px;
+    font-size: 12px;
+  }
+  #active::placeholder {
+    font-size: 12px;
+  }
+}

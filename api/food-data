@@ -2,7 +2,7 @@ const MENUDATA = [
   {
     id: 2,
     foodImageSrc: "/food-2.jpg",
-    foodName: "food",
+    foodName: "English Breakfast",
     foodDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, neque. Lorem ipsum dolor sit amet.",
     price: 10.0,
@@ -11,7 +11,7 @@ const MENUDATA = [
   {
     id: 3,
     foodImageSrc: "/food-3.jpg",
-    foodName: "food",
+    foodName: "Desert",
     foodDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, neque. Lorem ipsum dolor sit amet.",
     price: 20.0,
@@ -20,7 +20,7 @@ const MENUDATA = [
   {
     id: 4,
     foodImageSrc: "/food-4.jpg",
-    foodName: "food",
+    foodName: "Fries with salad",
     foodDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, neque. Lorem ipsum dolor sit amet.",
     price: 30.0,
@@ -38,7 +38,7 @@ const MENUDATA = [
   {
     id: 6,
     foodImageSrc: "/food-6.jpg",
-    foodName: "food",
+    foodName: "spaghetti",
     foodDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, neque. Lorem ipsum dolor sit amet.",
     price: 20.0,
@@ -56,7 +56,7 @@ const MENUDATA = [
   {
     id: 8,
     foodImageSrc: "/food-2.jpg",
-    foodName: "food",
+    foodName: "English Breakfast",
     foodDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, neque. Lorem ipsum dolor sit amet.",
     price: 50.0,
@@ -65,7 +65,7 @@ const MENUDATA = [
   {
     id: 1,
     foodImageSrc: "/food-5.jpg",
-    foodName: "food",
+    foodName: "shrimp soup",
     foodDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, neque. Lorem ipsum dolor sit amet.",
     price: 15.0,

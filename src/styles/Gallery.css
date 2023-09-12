@@ -29,12 +29,13 @@
   align-items: center;
   flex-wrap: wrap;
   width: 350px;
+  height: 350px;
   margin: 5px 10px;
   background: black;
 }
 .gallery--container .gallery--content .gallery--image {
   width: 100%;
-  height: 350px;
+  height: 100%;
   transition: 0.3s;
 }
 .gallery--container .gallery--content:hover .gallery--image {
@@ -42,7 +43,7 @@
 }
 .gallery--container .gallery--content .gallery--title {
   position: absolute;
-  margin-top: -100px;
+  margin-top: -25%;
   font-size: 30px;
   color: rgb(37, 225, 14);
   z-index: 5;
@@ -54,12 +55,12 @@
 }
 .gallery--container .gallery--content .gallery--description {
   position: absolute;
-  width: 330px;
-  margin-top: 50px;
+  width: 35%;
+    margin-top: 8%;
   color: white;
   font-size: 17px;
   font-weight: 500;
-  align-items: justify;
+  text-align: center;
   z-index: inherit;
   opacity: 0;
   transform: translateY(10px);
@@ -79,4 +80,56 @@
 .gallery--content:hover .gallery--btn {
   transform: translateY(-20px);
   opacity: 1;
+}
+@media screen and (max-width: 480px) {
+  .gallery--wrapper {
+    width: 100%;
+    margin: 5px 0;
+  }
+  .gallery--wrapper .gallery--header {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  .gallery--wrapper .gallery--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+  }
+  .gallery--container .gallery--content {
+    flex-wrap: nowrap;
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+  }
+
+  .gallery--container .gallery--content .gallery--title {
+    font-size: 15px;
+  }
+
+  .gallery--container .gallery--content .gallery--description {
+    position: absolute;
+    width: 35%;
+    margin-top: 8%;
+    font-size: 12px;
+    transform: translateY(10px);
+    transition: 0.3s;
+  }
+  .gallery--container .gallery--content:hover .gallery--description {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  .gallery--content .gallery--btn {
+    position: absolute;
+    margin-top: 200px;
+    transform: translateY(100px);
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .gallery--content:hover .gallery--btn {
+    transform: translateY(-120%);
+    opacity: 1;
+  }
 }

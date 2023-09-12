@@ -7,7 +7,7 @@ import swiperImage_3 from "/background-3.jpg";
 import "swiper/css/bundle";
 import "swiper/css/effect-fade";
 import "swiper/css";
-import "./Hero.css";
+import "/src/styles/Hero.css";
 
 import { Autoplay, EffectFade } from "swiper/modules";
 

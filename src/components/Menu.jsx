@@ -1,7 +1,7 @@
 import { FaHeart, FaStar, FaStarHalfAlt } from "react-icons/fa";
-import "./Menu.css";
-import MENUDATA from "../../../api/food-data";
-import GenButton from "../button";
+import "/src/styles/Menu.css";
+import MENUDATA from "/api/food-data";
+import GenButton from "./button";
 import { useState } from "react";
 
 export default function MenuCards() {

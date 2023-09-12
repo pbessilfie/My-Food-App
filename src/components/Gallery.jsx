@@ -1,6 +1,6 @@
-import "./Gallery.css";
-import GALLERYDATA from "../../../api/gallery-data";
-import GenButton from "../button";
+import "/src/styles/Gallery.css";
+import GALLERYDATA from "../../api/gallery-data";
+import GenButton from "./button";
 
 export default function Gallery() {
   const gallery = GALLERYDATA.map((item) => {

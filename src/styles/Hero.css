@@ -1,7 +1,7 @@
 .hero--wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/9; /* margin-top: 65px; */
+  aspect-ratio: 16/10; /* margin-top: 65px; */
 }
 .hero--wrapper .mySwiper {
   height: 100%;
@@ -48,4 +48,18 @@
   font-weight: 500;
   text-align: justify;
   color: #fff;
+}
+@media  screen and (max-width: 480px) {
+  .hero--wrapper .hero--content {
+ top: 45%;
+  width: 90%;
+ 
+}
+  .hero--wrapper .hero--content .hero--content--title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.hero--wrapper .hero--content .hero--content--description {
+  font-size: 10px;
+}
 }

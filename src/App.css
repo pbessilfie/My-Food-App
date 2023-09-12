@@ -34,3 +34,16 @@
   font-weight: 500;
   font-size: 17px;
 }
+@media screen and (max-width: 480px) {
+  .gen--btn {
+    padding: 5px 10px;
+    margin-bottom: 5px;
+  }
+  .gen--btn a {
+    font-size: 12px;
+  }
+  .gen--btn:hover a {
+    font-weight: 500;
+    font-size: 13px;
+  }
+}

@@ -4,10 +4,10 @@ import MENUDATA from "/api/food-data";
 import GenButton from "./button";
 import { useState } from "react";
 
-export default function MenuCards() {
+export default function Menu({handleClick}) {
   const [menuData, setMenuData] = useState(MENUDATA);
 
-  // Define a function to handle the favorite status of a menu item
+  // a function to handle the favorite status of a menu item
   const handleFavorite = (menuId) => {
     setMenuData((prevData) => {
       return prevData.map((menuItem) => {
@@ -26,7 +26,7 @@ export default function MenuCards() {
         <FaHeart
           className={`favorite ${item.favorite ? "active" : ""}`}
           style={{ color: item.favorite ? "rgba(14, 250, 14)" : "white" }}
-          onClick={() => handleFavorite(item.id)} // Pass the menu item's ID
+          onClick={() => handleFavorite(item.id)}
         />
       </div>
 
@@ -43,7 +43,13 @@ export default function MenuCards() {
         <FaStar />
         <FaStarHalfAlt />
       </div>
-      <GenButton label="Add to Cart" />
+      <GenButton
+        label="Add to Cart"
+        handleClick={(event) => {
+          handleClick(item);
+          event.preventDefault();
+        }}
+      />
     </div>
   ));
 

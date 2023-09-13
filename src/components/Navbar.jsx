@@ -5,7 +5,9 @@ import { FaBars, FaSearch, FaHeart, FaCartArrowDown } from "react-icons/fa";
 import websiteLogo from "/website-logo.png";
 import Cart from "./Cart";
 
-export default function Navbar() {
+export default function Navbar(props) {
+  // eslint-disable-next-line react/prop-types
+  const { size, cart, setCart } = props;
   const [searchBar, setSearchBar] = useState(false);
   const [navbar, setNavbar] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -46,8 +48,27 @@ export default function Navbar() {
             <button className="nav--btn">
               <FaHeart />
             </button>
-            <button className="nav--btn" onClick={shoppingCartVisibility}>
+            <button
+              className="nav--btn"
+              onClick={shoppingCartVisibility}
+              style={{ position: "relative" }}
+            >
               <FaCartArrowDown />
+              <span
+                style={{
+                  position: "absolute",
+                  bottom: "20px",
+                  right: "-8px",
+                  zIndex: "3",
+                  color: "#fff",
+                  backgroundColor: "green",
+                  fontSize: "10px",
+                  padding: "1px 4px",
+                  borderRadius: "50%",
+                }}
+              >
+                {size}
+              </span>
             </button>
             <button
               className="nav--btn menu--btn"
@@ -59,7 +80,7 @@ export default function Navbar() {
             </button>
           </div>
         </nav>
-        {isVisible && <Cart />}
+        {isVisible && <Cart cart={cart} setCart={setCart} />}
       </header>
     </>
   );

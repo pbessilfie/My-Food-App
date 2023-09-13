@@ -158,6 +158,7 @@
     background: rgba(14, 132, 14, 0.98);
     padding: 10px;
     border-radius: 8px;
+    z-index: 100;
   }
   .nav-active a {
     color: #ffffff;
@@ -166,7 +167,7 @@
     width: 100%;
     text-decoration: none;
     text-align: center;
-    margin: -200px;
+    margin: -150px;
   }
 
   .nav-active a:hover {

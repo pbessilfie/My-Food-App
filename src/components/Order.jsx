@@ -13,7 +13,6 @@ export default function OrderForm() {
     customerAddress: "",
     customerMessage: "",
   });
-  console.log(formData);
   const handleOrder = (event) => {
     const { name, value } = event.target;
     setFormData((prevData) => {
@@ -135,7 +134,13 @@ export default function OrderForm() {
               cols="20"
             />
           </div>
-          <GenButton label="Order" backgroundColor="rgb(14, 132, 14)" />
+          <GenButton
+            label="Order"
+            backgroundColor="rgb(14, 132, 14)"
+            handleClick={(event) => {
+              event.preventDefault();
+            }}
+          />
         </form>
       </div>
     </section>

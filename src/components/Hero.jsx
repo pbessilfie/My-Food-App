@@ -10,6 +10,7 @@ import "swiper/css";
 import "/src/styles/Hero.css";
 
 import { Autoplay, EffectFade } from "swiper/modules";
+import GenButton from "./button";
 
 export default function Hero() {
   return (
@@ -43,7 +44,7 @@ export default function Hero() {
           <h1 className="hero--content--title">
             Taste Our <span>Recipes</span>
           </h1>
-          <p className="hero--content--description">
+          {/* <p className="hero--content--description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
             ipsa quia cumque laborum mollitia veniam rerum optio culpa quas.
             Inventore ipsum dolor natus adipisci! Amet nostrum odio error
@@ -56,7 +57,18 @@ export default function Hero() {
             nihil voluptatem nam quam atque. Perspiciatis totam cumque odio,
             amet pariatur quaerat illo eaque quis. Animi omnis rerum aspernatur
             temporibus provident
-          </p>
+          </p> */}
+          <div
+            style={{
+              position: "absolute",
+              right: "5%",
+              bottom: "-150%",
+              width: "20%",
+              height: "5%",
+            }}
+          >
+            <GenButton backgroundColor="green" label="Order now" />
+          </div>
         </div>
       </section>
     </>

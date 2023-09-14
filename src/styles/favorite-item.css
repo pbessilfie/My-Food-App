@@ -1,0 +1,119 @@
+.fav--wrapper {
+  position: fixed;
+  top: 65px;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  cursor: pointer;
+}
+.fav--wrapper .fav--container {
+  position: fixed;
+  right: 0.5%;
+  width: 550px;
+  height: 93%;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 20px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.fav--container .fav--container--heading {
+  font-size: 30px;
+  font-weight: 600;
+  font-family: mv boli;
+  text-decoration: underline;
+  color: rgb(14, 132, 14);
+}
+.fav--container .fav--content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: grey;
+  width: 80%;
+  height: 20%;
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  margin: 10px auto;
+}
+.fav--container .fav--content .fav--image--box {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.fav--container .fav--content .fav--image--box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.fav--container .fav--content .fav--item--details {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 10px;
+}
+.fav--container .fav--content .fav--item--details h3 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: capitalize;
+}
+.fav--container .fav--content .fav--item--details span {
+  font-size: 15px;
+  font-weight: bold;
+  color: lawngreen;
+}
+@media screen and (max-width: 480px) {
+  .fav--wrapper .fav--container {
+    width: 100%;
+    height: 93%;
+    padding: 10px;
+  }
+  .fav--container .fav--container--heading {
+    font-size: 18px;
+  }
+  .fav--container .fav--content {
+    width: 90%;
+    height: 80px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+  }
+  .fav--container .fav--content .fav--image--box {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+  .fav--container .fav--content .fav--image--box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .fav--container .fav--content .fav--item--details {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .fav--container .fav--content .fav--item--details h3 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: capitalize;
+  }
+    .fav--container .fav--content .fav--item--details p {
+        font-size: 9px;
+    }
+  .fav--container .fav--content .fav--item--details span {
+    font-size: 10px;
+    font-weight: bold;
+    color: lawngreen;
+  }
+}

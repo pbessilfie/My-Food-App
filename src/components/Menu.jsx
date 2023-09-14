@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import { FaHeart, FaStar, FaStarHalfAlt } from "react-icons/fa";
 import "/src/styles/Menu.css";
 import MENUDATA from "/api/food-data";
 import GenButton from "./button";
 import { useState } from "react";
 
-export default function Menu({handleClick}) {
+export default function Menu({ handleClick, handleFavItem, handleRemove }) {
   const [menuData, setMenuData] = useState(MENUDATA);
 
   // a function to handle the favorite status of a menu item
@@ -26,7 +27,16 @@ export default function Menu({handleClick}) {
         <FaHeart
           className={`favorite ${item.favorite ? "active" : ""}`}
           style={{ color: item.favorite ? "rgba(14, 250, 14)" : "white" }}
-          onClick={() => handleFavorite(item.id)}
+          onClick={() => {
+            if (!item.favorite) {
+              handleFavItem(item);
+            }
+            if (item.favorite) {
+              handleRemove(item.id);
+            }
+
+            handleFavorite(item.id);
+          }}
         />
       </div>
 

@@ -9,6 +9,7 @@ import bg_img from "/bg-img.jpg";
 
 export default function App() {
   const [cart, setCart] = useState([]);
+  const [favorite, setFavorite] = useState([]);
   const [warning, setWarning] = useState(false);
 
   const handleClick = (item) => {
@@ -27,6 +28,19 @@ export default function App() {
     }
     console.log(item);
   };
+
+  const handleFavItem = (item) => {
+    let isPresent = false;
+    favorite.forEach((product) => {
+      if (item.id === product.id) {
+        isPresent = true;
+      }
+    });
+    if (!isPresent) {
+      setFavorite([...favorite, item]);
+    }
+    console.log(item);
+  };
   const backgroundStyle = {
     backgroundImage: `url(${bg_img})`,
     backgroundRepeat: "no-repeat",
@@ -41,14 +55,37 @@ export default function App() {
     width: "100%",
     backdropFilter: "blur(7px)",
   };
+  const handleRemove = (id) => {
+    const arr = favorite.filter((item) => item.id !== id);
+    setFavorite(arr);
+  };
   return (
     <>
-      <Navbar size={cart.length} cart={cart} setCart={setCart} />
+      <Navbar
+        size={cart.length}
+        cart={cart}
+        setCart={setCart}
+        size0fav={favorite.length}
+        favorite={favorite}
+        setFavorite={setFavorite}
+        handleRemove={handleRemove}
+      />
+      {/* {!warning && (
+        <h1
+          style={{ zIndex: "30", position: "fixed", top: "65px", right: "2px" }}
+        >
+          Item Already in cart
+        </h1>
+      )} */}
       <div style={backgroundStyle}></div>
       <div style={Style}>
         <div className="website--main--container">
           <Hero />
-          <Menu handleClick={handleClick} />
+          <Menu
+            handleClick={handleClick}
+            handleFavItem={handleFavItem}
+            handleRemove={handleRemove}
+          />
           <Gallery />
           <OrderForm />
         </div>

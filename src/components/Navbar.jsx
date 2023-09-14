@@ -4,17 +4,17 @@ import "/src/styles/Navbar.css";
 import { FaBars, FaSearch, FaHeart, FaCartArrowDown } from "react-icons/fa";
 import websiteLogo from "/website-logo.png";
 import Cart from "./Cart";
+import FavoriteItem from "./FavoriteItem";
 
 export default function Navbar(props) {
   // eslint-disable-next-line react/prop-types
-  const { size, cart, setCart } = props;
+  const { size, size0fav, cart, setCart, favorite, setFavorite, handleRemove } =
+    props;
   const [searchBar, setSearchBar] = useState(false);
   const [navbar, setNavbar] = useState(false);
+  const [isOpenFav, setIsOpenFav] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
-  const shoppingCartVisibility = () => {
-    setIsVisible(!isVisible);
-  };
   return (
     <>
       <header className="navbar">
@@ -45,12 +45,43 @@ export default function Navbar(props) {
                 <FaSearch />
               </button>
             </div>
-            <button className="nav--btn">
+            <button
+              className="nav--btn"
+              style={{ position: "relative" }}
+              onClick={() => {
+                setIsOpenFav(!isOpenFav);
+
+                if (isVisible) {
+                  return setIsVisible(!isVisible);
+                }
+              }}
+            >
               <FaHeart />
+              <span
+                style={{
+                  position: "absolute",
+                  bottom: "20px",
+                  right: "-8px",
+                  zIndex: "3",
+                  color: "#fff",
+                  backgroundColor: "green",
+                  fontSize: "10px",
+                  padding: "1px 4px",
+                  borderRadius: "50%",
+                }}
+              >
+                {size0fav}
+              </span>
             </button>
             <button
               className="nav--btn"
-              onClick={shoppingCartVisibility}
+              onClick={() => {
+                setIsVisible(!isVisible);
+
+                if (isOpenFav) {
+                  setIsOpenFav(!isOpenFav);
+                }
+              }}
               style={{ position: "relative" }}
             >
               <FaCartArrowDown />
@@ -74,12 +105,27 @@ export default function Navbar(props) {
               className="nav--btn menu--btn"
               onClick={() => {
                 setNavbar(!navbar);
+                if (isOpenFav) {
+                  setIsOpenFav(!isOpenFav);
+                }
+                if (isVisible) {
+                  return setIsVisible(!isVisible);
+                }
               }}
             >
               <FaBars />
             </button>
           </div>
         </nav>
+        {isOpenFav && (
+          <FavoriteItem
+            favorite={favorite}
+            setFavorite={setFavorite}
+            isOpenFav={isOpenFav}
+            setIsOpenFav={setIsOpenFav}
+            handleRemove={handleRemove}
+          />
+        )}
         {isVisible && <Cart cart={cart} setCart={setCart} />}
       </header>
     </>

@@ -106,12 +106,22 @@ const Cart = ({ cart, setCart }) => {
   return (
     <div className="cart--container">
       <h1 className="cart--heading">Shopping Cart</h1>
-      <div style={{ marginTop: "30px" }}> {cartItems}</div>
-      <div className="cart--total--order--price">
-        <span className="total">Total Price</span>
-        <span className="total--amount">{price}</span>
+      <div style={{ marginTop: "20px",overflowY:'scroll',height:'80%' }}> {cartItems}</div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          height: "70px",
+          marginTop: "30px",
+        }}
+      >
+        <div className="cart--total--order--price">
+          <span className="total">Total Price</span>
+          <span className="total--amount">{price}</span>
+        </div>
+        <GenButton backgroundColor="green" label="Place Order" />
       </div>
-      <GenButton backgroundColor="green" label="Place Order" />
     </div>
   );
 };

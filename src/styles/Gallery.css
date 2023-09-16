@@ -56,7 +56,7 @@
 .gallery--container .gallery--content .gallery--description {
   position: absolute;
   width: 35%;
-    margin-top: 8%;
+  margin-top: 8%;
   color: white;
   font-size: 17px;
   font-weight: 500;
@@ -80,6 +80,16 @@
 .gallery--content:hover .gallery--btn {
   transform: translateY(-20px);
   opacity: 1;
+}
+.gallery--popup--container {
+  position: fixed;
+  left: 0;
+  top: 70px;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  z-index: 300;
 }
 @media screen and (max-width: 480px) {
   .gallery--wrapper {

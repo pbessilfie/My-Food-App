@@ -17,16 +17,15 @@ export default function App() {
     cart.forEach((product) => {
       if (item.id === product.id) {
         isPresent = true;
+        setWarning(!warning);
+        setTimeout(() => {
+          setWarning(false);
+        }, 2000);
       }
     });
     if (!isPresent) {
-      setWarning(!warning);
-      setTimeout(() => {
-        setWarning(false);
-      }, 2000);
       setCart([...cart, item]);
     }
-    console.log(item);
   };
 
   const handleFavItem = (item) => {
@@ -70,13 +69,23 @@ export default function App() {
         setFavorite={setFavorite}
         handleRemove={handleRemove}
       />
-      {/* {!warning && (
+      {warning && (
         <h1
-          style={{ zIndex: "30", position: "fixed", top: "65px", right: "2px" }}
+          style={{
+            zIndex: "30",
+            position: "fixed",
+            top: "75px",
+            right: "2px",
+            fontSize: "15px",
+            color: "red",
+            backgroundColor: "white",
+            padding: "5px",
+            border: "2px solid red",
+          }}
         >
           Item Already in cart
         </h1>
-      )} */}
+      )}
       <div style={backgroundStyle}></div>
       <div style={Style}>
         <div className="website--main--container">

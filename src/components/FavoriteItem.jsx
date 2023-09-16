@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "/src/styles/favorite-item.css";
 import { FaTimes } from "react-icons/fa";
 function FavoriteItem({
@@ -10,6 +10,7 @@ function FavoriteItem({
   setIsOpenFav,
   handleRemove,
 }) {
+  const [warning, setWarning] = useState(!false);
   const favoriteItems = favorite.map((item, index) => {
     return (
       <div className="fav--content" key={index}>
@@ -44,16 +45,27 @@ function FavoriteItem({
   return (
     <div
       className="fav--wrapper"
-    //   onClick={() => {
-    //     setIsOpenFav(!isOpenFav);
-    //   }}
+      //   onClick={() => {
+      //     setIsOpenFav(!isOpenFav);
+      //   }}
     >
-      <div
-        className="fav--container"
-       
-      >
+      <div className="fav--container">
         <h1 className="fav--container--heading">Favorite Recipes</h1>
-        {favoriteItems}
+        {!favoriteItems == [] ? (
+          favoriteItems
+        ) : (
+          <span
+            style={{
+              position: "absolute",
+              left: "50%",
+              top: "50%",
+              transform: "translate(-50%,-50%)",
+              color: "green",
+            }}
+          >
+            no favorite item
+          </span>
+        )}
       </div>
     </div>
   );

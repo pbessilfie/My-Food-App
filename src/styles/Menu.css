@@ -113,6 +113,8 @@
     gap: 10px;
     overflow-x: scroll;
     padding: 5px;
+    height: 400px;
+    overflow-y: scroll;
   }
   .menu--container .menu--card {
     height: 180px;

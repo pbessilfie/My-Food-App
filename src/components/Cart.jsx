@@ -105,7 +105,21 @@ const Cart = ({ cart, setCart }) => {
     <div className="cart--container">
       <h1 className="cart--heading">Shopping Cart</h1>
       <div style={{ marginTop: "20px", overflowY: "scroll", height: "80%" }}>
-        {cart == [] ? <span>there are no items in cart</span> : cartItems}
+        {!cart.length > 0 ? (
+          <span
+            style={{
+              position: "absolute",
+              left: "50%",
+              top: "50%",
+              transform: "translate(-50%,-50%)",
+              color: "green",
+            }}
+          >
+            there are no items in cart
+          </span>
+        ) : (
+          cartItems
+        )}
       </div>
       <div
         style={{

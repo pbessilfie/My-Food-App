@@ -54,7 +54,7 @@ export default function Gallery() {
                 top: "50%",
                 transform: "translate(-50%,-50%)",
                 width: "80%",
-                height: "50%",
+                height: "60%",
                 backgroundColor: "#fff",
                 padding: "5px",
               }}

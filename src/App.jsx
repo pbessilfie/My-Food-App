@@ -60,6 +60,7 @@ export default function App() {
   };
   return (
     <>
+   
       <Navbar
         size={cart.length}
         cart={cart}

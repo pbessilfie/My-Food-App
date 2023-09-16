@@ -43,15 +43,10 @@ function FavoriteItem({
     );
   });
   return (
-    <div
-      className="fav--wrapper"
-      //   onClick={() => {
-      //     setIsOpenFav(!isOpenFav);
-      //   }}
-    >
+    <div className="fav--wrapper">
       <div className="fav--container">
         <h1 className="fav--container--heading">Favorite Recipes</h1>
-        {!favoriteItems == [] ? (
+        {favoriteItems.length > 0 ? (
           favoriteItems
         ) : (
           <span

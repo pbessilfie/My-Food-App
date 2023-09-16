@@ -44,20 +44,13 @@ export default function Hero() {
           <h1 className="hero--content--title">
             Taste Our <span>Recipes</span>
           </h1>
-          {/* <p className="hero--content--description">
+          <p className="hero--content--description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
             ipsa quia cumque laborum mollitia veniam rerum optio culpa quas.
             Inventore ipsum dolor natus adipisci! Amet nostrum odio error
             aspernatur aperiam soluta ipsum sint! Quo eligendi nemo molestiae ut
-            ducimus cum aspernatur nostrum expedita aperiam, libero, dolorem
-            excepturi animi commodi? Odio dolorum qui sit nostrum voluptates.
-            Dolores, minima. Minima tempore debitis veniam nulla nobis,
-            voluptatum ullam culpa repellat ad illo recusandae unde accusantium
-            impedit quidem blanditiis quod reprehenderit consequuntur alias et
-            nihil voluptatem nam quam atque. Perspiciatis totam cumque odio,
-            amet pariatur quaerat illo eaque quis. Animi omnis rerum aspernatur
-            temporibus provident
-          </p> */}
+          
+          </p>
           <div
             style={{
               position: "absolute",
